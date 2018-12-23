@@ -1,36 +1,50 @@
-s-button button {
-  $btn-bgd: #cecece;
-  $btn-color: #555;
-  // padding: 8px 15px;
-  height: 36px;
-  padding: {
-    left: 15px;
-    right: 15px;
-  }
-  border: 1px solid $btn-bgd;
-  outline: none;
-  border-radius: 3px;
-  color: $btn-color;
-  background: white;
-
-  &:hover, &:active {
-    color: #85a7ef;
-    border: 1px solid #85a7ef;
-
-  }
-
-  &:active {
-    box-shadow: 0 0 0 2px #b2c6f1;
-  }
-
-  &.s-fill {
-    color: white;
-    background-color: #4b83e6;
-    border: none;
+s-button {
+  button {
+    $btn-bgd: #cecece;
+    $btn-color: #555;
+    // padding: 8px 15px;
+    height: 36px;
+    padding: {
+      left: 15px;
+      right: 15px;
+    }
+    border: 1px solid $btn-bgd;
+    outline: none;
+    border-radius: 3px;
+    color: $btn-color;
+    background: white;
 
     &:hover, &:active {
-      background-color: #3d68b5;
-      // box-shadow: none;
+      color: #85a7ef;
+      border: 1px solid #85a7ef;
+
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px #b2c6f1;
+    }
+
+    &.s-fill {
+      color: white;
+      background-color: #4b83e6;
+      border: none;
+
+      &:hover, &:active {
+        background-color: #3d68b5;
+        // box-shadow: none;
+      }
+    }
+  }
+  &[fill] {
+    button {
+      color: white;
+      background-color: #4b83e6;
+      border: none;
+
+      &:hover, &:active {
+        background-color: #3d68b5;
+        // box-shadow: none;
+      }
     }
   }
 }

@@ -12,8 +12,12 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface SButton {}
-  interface SButtonAttributes extends StencilHTMLAttributes {}
+  interface SButton {
+    'fill': boolean;
+  }
+  interface SButtonAttributes extends StencilHTMLAttributes {
+    'fill'?: boolean;
+  }
 }
 
 declare global {
