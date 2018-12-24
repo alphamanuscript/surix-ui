@@ -12,23 +12,132 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface SAppBarLayout {}
+  interface SAppBarLayoutAttributes extends StencilHTMLAttributes {}
+
+  interface SAppBar {}
+  interface SAppBarAttributes extends StencilHTMLAttributes {}
+
+  interface SApp {}
+  interface SAppAttributes extends StencilHTMLAttributes {}
+
+  interface SBanner {}
+  interface SBannerAttributes extends StencilHTMLAttributes {}
+
   interface SButton {
     'fill': boolean;
   }
   interface SButtonAttributes extends StencilHTMLAttributes {
     'fill'?: boolean;
   }
+
+  interface SContainer {}
+  interface SContainerAttributes extends StencilHTMLAttributes {}
+
+  interface SDrawerLayout {}
+  interface SDrawerLayoutAttributes extends StencilHTMLAttributes {}
+
+  interface SDrawer {}
+  interface SDrawerAttributes extends StencilHTMLAttributes {}
+
+  interface SFieldGroup {}
+  interface SFieldGroupAttributes extends StencilHTMLAttributes {}
+
+  interface SNavGroup {}
+  interface SNavGroupAttributes extends StencilHTMLAttributes {}
+
+  interface SNavItem {
+    'active': boolean;
+  }
+  interface SNavItemAttributes extends StencilHTMLAttributes {
+    'active'?: boolean;
+  }
+
+  interface SNavSeparator {}
+  interface SNavSeparatorAttributes extends StencilHTMLAttributes {}
+
+  interface SPanelBody {}
+  interface SPanelBodyAttributes extends StencilHTMLAttributes {}
+
+  interface SPanelHeader {}
+  interface SPanelHeaderAttributes extends StencilHTMLAttributes {}
+
+  interface SPanel {}
+  interface SPanelAttributes extends StencilHTMLAttributes {}
+
+  interface STextField {
+    'multiline': boolean;
+    'placeholder': string;
+  }
+  interface STextFieldAttributes extends StencilHTMLAttributes {
+    'multiline'?: boolean;
+    'placeholder'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'SAppBarLayout': Components.SAppBarLayout;
+    'SAppBar': Components.SAppBar;
+    'SApp': Components.SApp;
+    'SBanner': Components.SBanner;
     'SButton': Components.SButton;
+    'SContainer': Components.SContainer;
+    'SDrawerLayout': Components.SDrawerLayout;
+    'SDrawer': Components.SDrawer;
+    'SFieldGroup': Components.SFieldGroup;
+    'SNavGroup': Components.SNavGroup;
+    'SNavItem': Components.SNavItem;
+    'SNavSeparator': Components.SNavSeparator;
+    'SPanelBody': Components.SPanelBody;
+    'SPanelHeader': Components.SPanelHeader;
+    'SPanel': Components.SPanel;
+    'STextField': Components.STextField;
   }
 
   interface StencilIntrinsicElements {
+    's-app-bar-layout': Components.SAppBarLayoutAttributes;
+    's-app-bar': Components.SAppBarAttributes;
+    's-app': Components.SAppAttributes;
+    's-banner': Components.SBannerAttributes;
     's-button': Components.SButtonAttributes;
+    's-container': Components.SContainerAttributes;
+    's-drawer-layout': Components.SDrawerLayoutAttributes;
+    's-drawer': Components.SDrawerAttributes;
+    's-field-group': Components.SFieldGroupAttributes;
+    's-nav-group': Components.SNavGroupAttributes;
+    's-nav-item': Components.SNavItemAttributes;
+    's-nav-separator': Components.SNavSeparatorAttributes;
+    's-panel-body': Components.SPanelBodyAttributes;
+    's-panel-header': Components.SPanelHeaderAttributes;
+    's-panel': Components.SPanelAttributes;
+    's-text-field': Components.STextFieldAttributes;
   }
 
+
+  interface HTMLSAppBarLayoutElement extends Components.SAppBarLayout, HTMLStencilElement {}
+  var HTMLSAppBarLayoutElement: {
+    prototype: HTMLSAppBarLayoutElement;
+    new (): HTMLSAppBarLayoutElement;
+  };
+
+  interface HTMLSAppBarElement extends Components.SAppBar, HTMLStencilElement {}
+  var HTMLSAppBarElement: {
+    prototype: HTMLSAppBarElement;
+    new (): HTMLSAppBarElement;
+  };
+
+  interface HTMLSAppElement extends Components.SApp, HTMLStencilElement {}
+  var HTMLSAppElement: {
+    prototype: HTMLSAppElement;
+    new (): HTMLSAppElement;
+  };
+
+  interface HTMLSBannerElement extends Components.SBanner, HTMLStencilElement {}
+  var HTMLSBannerElement: {
+    prototype: HTMLSBannerElement;
+    new (): HTMLSBannerElement;
+  };
 
   interface HTMLSButtonElement extends Components.SButton, HTMLStencilElement {}
   var HTMLSButtonElement: {
@@ -36,12 +145,108 @@ declare global {
     new (): HTMLSButtonElement;
   };
 
+  interface HTMLSContainerElement extends Components.SContainer, HTMLStencilElement {}
+  var HTMLSContainerElement: {
+    prototype: HTMLSContainerElement;
+    new (): HTMLSContainerElement;
+  };
+
+  interface HTMLSDrawerLayoutElement extends Components.SDrawerLayout, HTMLStencilElement {}
+  var HTMLSDrawerLayoutElement: {
+    prototype: HTMLSDrawerLayoutElement;
+    new (): HTMLSDrawerLayoutElement;
+  };
+
+  interface HTMLSDrawerElement extends Components.SDrawer, HTMLStencilElement {}
+  var HTMLSDrawerElement: {
+    prototype: HTMLSDrawerElement;
+    new (): HTMLSDrawerElement;
+  };
+
+  interface HTMLSFieldGroupElement extends Components.SFieldGroup, HTMLStencilElement {}
+  var HTMLSFieldGroupElement: {
+    prototype: HTMLSFieldGroupElement;
+    new (): HTMLSFieldGroupElement;
+  };
+
+  interface HTMLSNavGroupElement extends Components.SNavGroup, HTMLStencilElement {}
+  var HTMLSNavGroupElement: {
+    prototype: HTMLSNavGroupElement;
+    new (): HTMLSNavGroupElement;
+  };
+
+  interface HTMLSNavItemElement extends Components.SNavItem, HTMLStencilElement {}
+  var HTMLSNavItemElement: {
+    prototype: HTMLSNavItemElement;
+    new (): HTMLSNavItemElement;
+  };
+
+  interface HTMLSNavSeparatorElement extends Components.SNavSeparator, HTMLStencilElement {}
+  var HTMLSNavSeparatorElement: {
+    prototype: HTMLSNavSeparatorElement;
+    new (): HTMLSNavSeparatorElement;
+  };
+
+  interface HTMLSPanelBodyElement extends Components.SPanelBody, HTMLStencilElement {}
+  var HTMLSPanelBodyElement: {
+    prototype: HTMLSPanelBodyElement;
+    new (): HTMLSPanelBodyElement;
+  };
+
+  interface HTMLSPanelHeaderElement extends Components.SPanelHeader, HTMLStencilElement {}
+  var HTMLSPanelHeaderElement: {
+    prototype: HTMLSPanelHeaderElement;
+    new (): HTMLSPanelHeaderElement;
+  };
+
+  interface HTMLSPanelElement extends Components.SPanel, HTMLStencilElement {}
+  var HTMLSPanelElement: {
+    prototype: HTMLSPanelElement;
+    new (): HTMLSPanelElement;
+  };
+
+  interface HTMLSTextFieldElement extends Components.STextField, HTMLStencilElement {}
+  var HTMLSTextFieldElement: {
+    prototype: HTMLSTextFieldElement;
+    new (): HTMLSTextFieldElement;
+  };
+
   interface HTMLElementTagNameMap {
+    's-app-bar-layout': HTMLSAppBarLayoutElement
+    's-app-bar': HTMLSAppBarElement
+    's-app': HTMLSAppElement
+    's-banner': HTMLSBannerElement
     's-button': HTMLSButtonElement
+    's-container': HTMLSContainerElement
+    's-drawer-layout': HTMLSDrawerLayoutElement
+    's-drawer': HTMLSDrawerElement
+    's-field-group': HTMLSFieldGroupElement
+    's-nav-group': HTMLSNavGroupElement
+    's-nav-item': HTMLSNavItemElement
+    's-nav-separator': HTMLSNavSeparatorElement
+    's-panel-body': HTMLSPanelBodyElement
+    's-panel-header': HTMLSPanelHeaderElement
+    's-panel': HTMLSPanelElement
+    's-text-field': HTMLSTextFieldElement
   }
 
   interface ElementTagNameMap {
+    's-app-bar-layout': HTMLSAppBarLayoutElement;
+    's-app-bar': HTMLSAppBarElement;
+    's-app': HTMLSAppElement;
+    's-banner': HTMLSBannerElement;
     's-button': HTMLSButtonElement;
+    's-container': HTMLSContainerElement;
+    's-drawer-layout': HTMLSDrawerLayoutElement;
+    's-drawer': HTMLSDrawerElement;
+    's-field-group': HTMLSFieldGroupElement;
+    's-nav-group': HTMLSNavGroupElement;
+    's-nav-item': HTMLSNavItemElement;
+    's-nav-separator': HTMLSNavSeparatorElement;
+    's-panel-body': HTMLSPanelBodyElement;
+    's-panel-header': HTMLSPanelHeaderElement;
+    's-panel': HTMLSPanelElement;
+    's-text-field': HTMLSTextFieldElement;
   }
 
 

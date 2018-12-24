@@ -1,0 +1,62 @@
+@import '../../variables';
+
+// html {
+//   min-height: 100vh;
+//   min-width: 100vw;
+// }
+
+// body {
+//   min-height: 100vh;
+//   min-width: 100vw;
+//   padding: 0;
+//   margin: 0;
+// }
+
+s-app > div {
+  height: 100vh;
+  background-color: $background-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  @include fill-viewport;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+html {
+  @include fill-viewport();
+}
+
+.mt {
+  margin-top: $margin-y;
+  &-lg {
+    margin-top: $margin-y * 2;
+  }
+}
+
+.mb {
+  margin-bottom: $margin-y;
+  &-lg {
+    margin-bottom: $margin-y * 2;
+  }
+}
+
+.text-thin {
+  @include text-thin();
+}
+
+.text-extra-thin {
+  @include text-extra-thin;
+}

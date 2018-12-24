@@ -1,0 +1,66 @@
+@import '../../variables';
+
+$drawer-background-color: #27375D;
+
+s-drawer > div {
+  width: $drawer-width;
+  background-color: $drawer-background-color;
+  position: fixed;
+  height: 100vh;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+  z-index: 30;
+}
+
+[s-drawer-header] {
+  height: $header-height;
+  margin: 0;
+  padding: {
+    left: $padding;
+    right: $padding;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2A4071;
+  color: $text-light;
+}
+
+.s-drawer-content {
+  @include text-thin;
+  padding-top: $padding;
+  [s-nav-group-header] {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    color: #91a6d2;
+    padding: 10px $padding;
+    font-weight: 500;
+  }
+  s-nav-item {
+    > div {
+      color: #91a6d2;
+      padding: 10px $padding;
+      font-size: 0.85em;
+    }
+
+    &[active] > div {
+      color: $text-light;
+      background-color: #1b3158;
+    }
+
+    &:hover > div {
+      background-color: #1b3158;
+    }
+  }
+
+  s-nav-group {
+    s-nav-item > div {
+      padding-left: $padding * 2;
+    }
+  }
+
+  s-nav-separator > div {
+    border-bottom: 1px solid #172b4e;
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../variables';
+
+
+s-drawer-layout {
+  > div {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    s-drawer {
+      width: $drawer-width;
+      background-color: $drawer-background-color;
+      position: fixed;
+      height: 100vh;
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+      z-index: 30;
+    }
+
+    [s-drawer-layout-main] {
+      flex-grow: 1;
+      position: relative;
+      margin-left: $drawer-width;
+      @media screen and (max-width: 500px) {
+        margin-left: 0;
+      }
+    }
+  }
+}

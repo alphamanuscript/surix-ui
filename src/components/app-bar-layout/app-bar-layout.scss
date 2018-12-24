@@ -1,0 +1,17 @@
+@import '../../variables';
+
+s-app-bar-layout > div {
+  position: relative;
+  s-app-bar {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+  }
+
+  .s-app-bar-layout-content {
+    margin-top: $header-height;
+    min-height: calc(100vh - 50px);
+    z-index: 9;
+    overflow-y: auto;
+  }
+}
