@@ -45,6 +45,11 @@ $button-large-height: 20px;
     &:focus {
       outline: none;
     }
+
+    .label {
+      flex-grow: 1;
+      text-align: center;
+    }
   }
 }
 :host(.block) {
@@ -113,4 +118,12 @@ $button-large-height: 20px;
       width: map-get($size-map, height);
     }
   }
+}
+
+::slotted([slot=prefix]) {
+  margin-right: 1em;
+}
+
+::slotted([slot=suffix]) {
+  margin-left: 1em;
 }

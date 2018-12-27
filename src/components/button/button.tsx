@@ -35,7 +35,9 @@ export class SButton {
     return (
       <button>
         <slot name="prefix"></slot>
-        <slot></slot>
+        <span class="label">
+          <slot></slot>
+        </span>
         <slot name="suffix"></slot>
       </button>
     );
