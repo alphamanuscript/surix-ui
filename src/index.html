@@ -3,13 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <title>Surix UI Components</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <script src="/build/surix.js"></script>
-  <style>
-    s-panel > div {
-      height: 400px;
-    }
-  </style>
 </head>
 <body>
   <s-app>
@@ -54,15 +51,50 @@
                 <s-field-group>
                   <s-text-field multiline  placeholder="Enter description"></s-text-field>
                 </s-field-group>
-                <s-field-group>
-                  <s-button>Click Me</s-button>
-                </s-field-group>
-                <s-field-group>
-                  <s-button fill>Click Me</s-button>
-                </s-field-group>
               </s-panel-body>
             </s-panel>
             <s-panel class="mb-lg">
+              <s-panel-header>
+                <div slot="title">Buttons</div>
+              </s-panel-header>
+              <s-panel-body>
+                <s-field-group>
+                  <s-button>Submit</s-button>
+                  <s-button>Cancel</s-button>
+                </s-field-group>
+                <s-field-group>
+                  <s-button block>Full Button</s-button>
+                </s-field-group>
+                <s-field-group>
+                    <s-button primary>Primary</s-button>
+                    <s-button>Cancel</s-button>
+                    <s-button round primary>Round</s-button>
+                    <s-button>
+                      <s-icon name="arrow-left" slot="prefix"></s-icon>
+                      Back
+                    </s-button>
+                    <s-button primary>
+                      Next
+                      <s-icon name="arrow-right" slot="suffix"></s-icon>
+                    </s-button>
+                    <s-button block>
+                      <s-icon name="user" slot="prefix"></s-icon>
+                      Edit Profile
+                      <s-icon name="pen" slot="suffix"></s-icon>
+                    </s-button>
+                    <s-button><s-icon name="user"></s-icon></s-button>
+                    <s-button icon-only><s-icon name="user"></s-icon></s-button>
+                    <s-button icon-only circle><s-icon name="times"></s-icon></s-button>
+                    <s-button icon-only circle small><s-icon name="times"></s-icon></s-button>
+                    <s-button danger>Delete</s-button>
+                    <s-button icon-only circle small danger>
+                      <s-icon name="trash"></s-icon>
+                    </s-button>
+                    <s-button small>Small</s-button>
+                    <s-button large>Large</s-button>
+                    <s-button icon-only large circle primary><s-icon name="pen"></s-icon></s-button>
+                  </s-field-group>
+              </s-panel-body>
             </s-panel>
             <s-panel class="mb-lg">
             </s-panel>

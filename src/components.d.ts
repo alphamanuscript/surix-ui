@@ -25,10 +25,24 @@ export namespace Components {
   interface SBannerAttributes extends StencilHTMLAttributes {}
 
   interface SButton {
-    'fill': boolean;
+    'block': boolean;
+    'circle': boolean;
+    'danger': boolean;
+    'iconOnly': boolean;
+    'large': boolean;
+    'primary': boolean;
+    'round': boolean;
+    'small': boolean;
   }
   interface SButtonAttributes extends StencilHTMLAttributes {
-    'fill'?: boolean;
+    'block'?: boolean;
+    'circle'?: boolean;
+    'danger'?: boolean;
+    'iconOnly'?: boolean;
+    'large'?: boolean;
+    'primary'?: boolean;
+    'round'?: boolean;
+    'small'?: boolean;
   }
 
   interface SContainer {}
@@ -42,6 +56,13 @@ export namespace Components {
 
   interface SFieldGroup {}
   interface SFieldGroupAttributes extends StencilHTMLAttributes {}
+
+  interface SIcon {
+    'name': string;
+  }
+  interface SIconAttributes extends StencilHTMLAttributes {
+    'name'?: string;
+  }
 
   interface SNavGroup {}
   interface SNavGroupAttributes extends StencilHTMLAttributes {}
@@ -86,6 +107,7 @@ declare global {
     'SDrawerLayout': Components.SDrawerLayout;
     'SDrawer': Components.SDrawer;
     'SFieldGroup': Components.SFieldGroup;
+    'SIcon': Components.SIcon;
     'SNavGroup': Components.SNavGroup;
     'SNavItem': Components.SNavItem;
     'SNavSeparator': Components.SNavSeparator;
@@ -105,6 +127,7 @@ declare global {
     's-drawer-layout': Components.SDrawerLayoutAttributes;
     's-drawer': Components.SDrawerAttributes;
     's-field-group': Components.SFieldGroupAttributes;
+    's-icon': Components.SIconAttributes;
     's-nav-group': Components.SNavGroupAttributes;
     's-nav-item': Components.SNavItemAttributes;
     's-nav-separator': Components.SNavSeparatorAttributes;
@@ -169,6 +192,12 @@ declare global {
     new (): HTMLSFieldGroupElement;
   };
 
+  interface HTMLSIconElement extends Components.SIcon, HTMLStencilElement {}
+  var HTMLSIconElement: {
+    prototype: HTMLSIconElement;
+    new (): HTMLSIconElement;
+  };
+
   interface HTMLSNavGroupElement extends Components.SNavGroup, HTMLStencilElement {}
   var HTMLSNavGroupElement: {
     prototype: HTMLSNavGroupElement;
@@ -221,6 +250,7 @@ declare global {
     's-drawer-layout': HTMLSDrawerLayoutElement
     's-drawer': HTMLSDrawerElement
     's-field-group': HTMLSFieldGroupElement
+    's-icon': HTMLSIconElement
     's-nav-group': HTMLSNavGroupElement
     's-nav-item': HTMLSNavItemElement
     's-nav-separator': HTMLSNavSeparatorElement
@@ -240,6 +270,7 @@ declare global {
     's-drawer-layout': HTMLSDrawerLayoutElement;
     's-drawer': HTMLSDrawerElement;
     's-field-group': HTMLSFieldGroupElement;
+    's-icon': HTMLSIconElement;
     's-nav-group': HTMLSNavGroupElement;
     's-nav-item': HTMLSNavItemElement;
     's-nav-separator': HTMLSNavSeparatorElement;

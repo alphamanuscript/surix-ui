@@ -1,50 +1,116 @@
-s-button {
+@import '../../variables';
+
+$button-base-bgd-color: #f3f7ff;// #e4edff;
+$button-base-color: #4288f9;
+$color-danger: #ff4444;
+$color-default: #4288f9;
+$button-base-radius: $border-radius;
+$button-round-radius: 64px;
+
+$button-sizes: (
+  base-size: (font-size: 0.9em, height: 36px, pad-x: 15px),
+  small: (font-size: 12px, height: 28px, pad-x: 15px),
+  large: (font-size: 18px, height: 50px, pad-x: 20px)
+);
+
+$button-base-size-height: 36px;
+$button-base-size-font-size: 0.9em;
+
+$button-small-height: 30px;
+$button-small-font-size: 13px;
+
+$button-large-font-size: 16px;
+$button-large-height: 20px;
+
+:host {
   button {
-    $btn-bgd: #cecece;
-    $btn-color: #555;
-    // padding: 8px 15px;
-    height: 36px;
-    padding: {
-      left: 15px;
-      right: 15px;
-    }
-    border: 1px solid $btn-bgd;
-    outline: none;
-    border-radius: 3px;
-    color: $btn-color;
-    background: white;
+    color: $button-base-color;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $button-base-bgd-color;
+    font-family: $font-family;
+    font-weight: 500;
+    display: inline-flex;
+    justify-content: space-between;
 
-    &:hover, &:active {
-      color: #85a7ef;
-      border: 1px solid #85a7ef;
-
+    &:hover {
+      background: darken($button-base-bgd-color, 2%);
     }
 
     &:active {
-      box-shadow: 0 0 0 2px #b2c6f1;
-    }
-
-    &.s-fill {
-      color: white;
-      background-color: #4b83e6;
+      background: darken($button-base-bgd-color, 5%);
+      outline: none;
       border: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+:host(.block) {
+  display: flex;
+  button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
 
-      &:hover, &:active {
-        background-color: #3d68b5;
-        // box-shadow: none;
+:host(.icon-only) button {
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+:host(.circle) button {
+  border-radius: 100%;
+}
+
+:host(.round) button {
+  border-radius: $button-round-radius;
+}
+
+:host(.primary) {
+  button {
+    background-color: $button-base-color;
+    color: white;
+
+    &:hover {
+      background: lighten($color-default, 2%);
+    }
+    &:active {
+      background: darken($color-default, 2%);
+    }
+  }
+}
+
+:host(.danger) {
+  button {
+    background-color: $color-danger;
+    color: white;
+
+    &:hover {
+      background: lighten($color-danger, 2%);
+    }
+    &:active {
+      background: darken($color-danger, 2%);
+    }
+  }
+}
+
+@each $size, $size-map in $button-sizes {
+  :host(.#{$size}) {
+    button {
+      font-size: map-get($size-map, font-size);
+      height: map-get($size-map, height);
+      padding: {
+        left: map-get($size-map, pad-x);
+        right: map-get($size-map, pad-x);
       }
     }
   }
-  &[fill] {
+  :host(.#{$size}.circle), :host(.#{$size}.circle) {
     button {
-      color: white;
-      background-color: #4b83e6;
-      border: none;
-
-      &:hover, &:active {
-        background-color: #3d68b5;
-        // box-shadow: none;
-      }
+      width: map-get($size-map, height);
     }
   }
 }
