@@ -89,12 +89,20 @@ export namespace Components {
   interface SPanelAttributes extends StencilHTMLAttributes {}
 
   interface STextField {
+    'error': string;
     'multiline': boolean;
     'placeholder': string;
+    'type': string;
+    'value': string;
   }
   interface STextFieldAttributes extends StencilHTMLAttributes {
+    'error'?: string;
     'multiline'?: boolean;
+    'onChange'?: (event: CustomEvent) => void;
+    'onInput'?: (event: CustomEvent) => void;
     'placeholder'?: string;
+    'type'?: string;
+    'value'?: string;
   }
 }
 

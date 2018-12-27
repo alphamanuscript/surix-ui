@@ -66,7 +66,10 @@
                   <s-button block>Full Button</s-button>
                 </s-field-group>
                 <s-field-group>
-                    <s-button primary>Primary</s-button>
+                    <s-button primary id="primary">Primary</s-button>
+                    <script>
+                      document.querySelector("#primary").addEventListener("click", () => alert("Primary Clicked"));
+                    </script>
                     <s-button>Cancel</s-button>
                     <s-button round primary>Round</s-button>
                     <s-button>
@@ -96,10 +99,37 @@
                     <s-button small>Small</s-button>
                     <s-button large>Large</s-button>
                     <s-button icon-only large circle primary><s-icon name="pen"></s-icon></s-button>
-                  </s-field-group>
+                </s-field-group>
               </s-panel-body>
             </s-panel>
             <s-panel class="mb-lg">
+              <s-panel-header>
+                <div slot="title">Text fields</div>
+              </s-panel-header>
+              <s-panel-body>
+                <s-field-group>
+                  <s-text-field placeholder="Placeholder"></s-text-field>
+                </s-field-group>
+                <s-field-group>
+                    <s-text-field value="Preset value"></s-text-field>
+                </s-field-group>
+                <s-field-group>
+                    <s-text-field placeholder="Error message" error="This is an error message"></s-text-field>
+                </s-field-group>
+                <s-field-group>
+                    <s-text-field placeholder="Suffix">
+                      <s-icon name="search" slot="suffix"></s-icon>
+                    </s-text-field>
+                </s-field-group>
+                <s-field-group>
+                    <s-text-field placeholder="Prefix">
+                      <s-icon name="envelope" slot="prefix"></s-icon>
+                    </s-text-field>
+                </s-field-group>
+                <s-field-group>
+                  <s-text-field type="password" placeholder="Password"></s-text-field>
+                </s-field-group>
+              </s-panel-body>
             </s-panel>
           </s-container>
         </div>

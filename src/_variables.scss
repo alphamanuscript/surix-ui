@@ -7,7 +7,7 @@ $background-color: #fafafb;
 $drawer-background-color: #27375D;
 $header-background-color: white;
 $border-color: #eaecef;
-$border-radius: 2px;
+$border-radius: 4px;
 $padding: 20px;
 
 $margin-y: 25px;
@@ -15,6 +15,15 @@ $margin-y: 25px;
 $text-light: #D6E3FF;
 $text-color: #1D2945;
 $text-secondary: #818796;
+
+$colors: (
+  primary: #4288f9,
+  danger: #ff4444
+);
+
+@function get-color($name) {
+  @return map-get($colors, $name);
+}
 
 @mixin fill-viewport {
   min-width: 100vw;
