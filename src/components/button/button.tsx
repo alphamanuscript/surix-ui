@@ -14,10 +14,12 @@ export class SButton {
   @Prop() primary!: boolean;
   @Prop() round!: boolean;
   @Prop() small!: boolean;
+  @Prop() disabled!: boolean;
 
   hostData () {
     return {
       class: {
+        'base-style': !(this.danger || this.primary),
         'base-size': !(this.large || this.small),
         block: this.block,
         circle: this.circle,
@@ -33,7 +35,7 @@ export class SButton {
 
   render () {
     return (
-      <button>
+      <button disabled={this.disabled}>
         <slot name="prefix"></slot>
         <span class="label">
           <slot></slot>

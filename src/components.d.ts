@@ -28,6 +28,7 @@ export namespace Components {
     'block': boolean;
     'circle': boolean;
     'danger': boolean;
+    'disabled': boolean;
     'iconOnly': boolean;
     'large': boolean;
     'primary': boolean;
@@ -38,6 +39,7 @@ export namespace Components {
     'block'?: boolean;
     'circle'?: boolean;
     'danger'?: boolean;
+    'disabled'?: boolean;
     'iconOnly'?: boolean;
     'large'?: boolean;
     'primary'?: boolean;
