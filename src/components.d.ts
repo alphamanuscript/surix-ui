@@ -47,6 +47,19 @@ export namespace Components {
     'small'?: boolean;
   }
 
+  interface SCheckbox {
+    'checked': boolean;
+    'disabled': boolean;
+    'value': boolean;
+  }
+  interface SCheckboxAttributes extends StencilHTMLAttributes {
+    'checked'?: boolean;
+    'disabled'?: boolean;
+    'onChange'?: (event: CustomEvent) => void;
+    'onInput'?: (event: CustomEvent) => void;
+    'value'?: boolean;
+  }
+
   interface SContainer {}
   interface SContainerAttributes extends StencilHTMLAttributes {}
 
@@ -92,6 +105,7 @@ export namespace Components {
     'error': string;
     'multiline': boolean;
     'placeholder': string;
+    'round': boolean;
     'type': string;
     'value': string;
   }
@@ -101,6 +115,7 @@ export namespace Components {
     'onChange'?: (event: CustomEvent) => void;
     'onInput'?: (event: CustomEvent) => void;
     'placeholder'?: string;
+    'round'?: boolean;
     'type'?: string;
     'value'?: string;
   }
@@ -113,6 +128,7 @@ declare global {
     'SApp': Components.SApp;
     'SBanner': Components.SBanner;
     'SButton': Components.SButton;
+    'SCheckbox': Components.SCheckbox;
     'SContainer': Components.SContainer;
     'SDrawerLayout': Components.SDrawerLayout;
     'SDrawer': Components.SDrawer;
@@ -133,6 +149,7 @@ declare global {
     's-app': Components.SAppAttributes;
     's-banner': Components.SBannerAttributes;
     's-button': Components.SButtonAttributes;
+    's-checkbox': Components.SCheckboxAttributes;
     's-container': Components.SContainerAttributes;
     's-drawer-layout': Components.SDrawerLayoutAttributes;
     's-drawer': Components.SDrawerAttributes;
@@ -176,6 +193,12 @@ declare global {
   var HTMLSButtonElement: {
     prototype: HTMLSButtonElement;
     new (): HTMLSButtonElement;
+  };
+
+  interface HTMLSCheckboxElement extends Components.SCheckbox, HTMLStencilElement {}
+  var HTMLSCheckboxElement: {
+    prototype: HTMLSCheckboxElement;
+    new (): HTMLSCheckboxElement;
   };
 
   interface HTMLSContainerElement extends Components.SContainer, HTMLStencilElement {}
@@ -256,6 +279,7 @@ declare global {
     's-app': HTMLSAppElement
     's-banner': HTMLSBannerElement
     's-button': HTMLSButtonElement
+    's-checkbox': HTMLSCheckboxElement
     's-container': HTMLSContainerElement
     's-drawer-layout': HTMLSDrawerLayoutElement
     's-drawer': HTMLSDrawerElement
@@ -276,6 +300,7 @@ declare global {
     's-app': HTMLSAppElement;
     's-banner': HTMLSBannerElement;
     's-button': HTMLSButtonElement;
+    's-checkbox': HTMLSCheckboxElement;
     's-container': HTMLSContainerElement;
     's-drawer-layout': HTMLSDrawerLayoutElement;
     's-drawer': HTMLSDrawerElement;

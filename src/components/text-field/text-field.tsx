@@ -14,6 +14,7 @@ export class STextField {
   @Prop() error!: string;
   @Prop() multiline!: boolean;
   @Prop() placeholder!: string;
+  @Prop() round!: boolean;
   @Prop() type!: string;
   @Prop({ mutable: true }) value!: string;
 
@@ -52,7 +53,8 @@ export class STextField {
   hostData() {
     return {
       class: {
-        focus: this.hasFocus
+        focus: this.hasFocus,
+        round: this.round
       }
     };
   }

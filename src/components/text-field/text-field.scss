@@ -34,7 +34,13 @@ textarea {
 
   background-color: $border-color; //rgb(238, 238, 238);
   appearance: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid $text-secondary;
+}
+
+:host(.round) {
+  .input-container {
+    border-radius: $border-radius-round;
+  }
 }
 
 .error-message {
